@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New House', new_house_path, class: "button" %>
+
+<h1> House Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>MLS</th>
+      <th>Street Addres</th>
+      <th>Address 2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zipcode</th>
+      <th>Neighborhood</th>
+      <th>Sales price</th>
+      <th>Date listed</th>
+      <th>Bedrooms</th>
+      <th>Bathrooms</th>
+      <th>Garage size</th>
+      <th>Square feet</th>
+      <th>Lot size</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @houses.each do |house| %>
+      <tr>
+        <td><%= house.mls %></td>
+        <td><%= house.street_1 %></td>
+        <td><%= house.street_2 %></td>
+        <td><%= house.city %></td>
+        <td><%= house.state %></td>
+        <td><%= house.zipcode %></td>
+        <td><%= house.neighborhood %></td>
+        <td><%= "$" + house.sales_price.to_s %></td>
+        <td><%= house.date_listed.strftime("%m/%d/%Y")  %></td>
+        <td><%= house.bedrooms %></td>
+        <td><%= house.bathrooms %></td>
+        <td><%= house.garage_size %></td>
+        <td><%= house.square_feet %></td>
+        <td><%= house.lot_size %></td>
+        <td><%= house.description %></td>
+        <td><%= link_to 'Show', house %></td>
+        <td><%= link_to 'Edit', edit_house_path(house) %></td>
+        <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -1,0 +1,52 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mls: 52
+  street_1: MyString
+  street_2: MyString
+  city: MyString
+  state: Oregon
+  zipcode: 97203
+  neighborhood: MyString
+  sales_price: 1
+  date_listed: 2018-11-05 23:51:52
+  bedrooms: 1
+  bathrooms: 1
+  garage_size: 1
+  square_feet: 1899
+  lot_size: 1
+  description: "exact match example"
+
+two:
+  mls: 2
+  street_1: MyString
+  street_2: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
+  neighborhood: MyString
+  sales_price: 1
+  date_listed: 2018-11-05 23:51:52
+  bedrooms: 2
+  bathrooms: 2
+  garage_size: 1
+  square_feet: 2000
+  lot_size: 1
+  description: "range example"
+
+three:
+  mls: 3
+  street_1: MyString
+  street_2: MyString
+  city: "Portland"
+  state: MyString
+  zipcode: 97203
+  neighborhood: MyString
+  sales_price: 1
+  date_listed: 2018-11-05 23:51:52
+  bedrooms: 1
+  bathrooms: 1
+  garage_size: 1
+  square_feet: 2101
+  lot_size: 1
+  description: "partial match example"

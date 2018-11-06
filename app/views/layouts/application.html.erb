@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fun Realtors</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="search_form">
+    <%= form_tag("/houses/search", method: "post") do %>
+      <select id="search" name="type">
+        <option value="mls">MLS#</<option>
+        <option value="city">City</<option>
+        <option value="state">State</<option>
+        <option value="zipcode">Zipcode</<option>
+        <option value="bedrooms"># Bedrooms</<option>
+        <option value="bathrooms"># Bathrooms</<option>
+        <option value="square_feet">Square Feet</<option>
+      </select>
+      <div id="search_name">
+        <input type="text" name="input">
+      </div>
+      <div id="search_range" class="hidden">
+        <input type="text" name="min" placeholder="min">
+        <input type="text" name="max" placeholder="max"/>
+      </div>
+      <input type="submit" value="Search"/>
+    <% end %>
+  </div>
+  <hr/>
+  <%= yield %>
+  <hr/>
+  <div id="footer">
+    &copy; 2018 Fun Realtors
+  </div>
+</body>
+</html>

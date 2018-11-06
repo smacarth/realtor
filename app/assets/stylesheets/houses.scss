@@ -1,0 +1,25 @@
+// Place all the styles related to the Houses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hidden{
+  display: none;
+}
+#search_form{
+  float: right;
+  clear: both;
+  background-color: #ddd;
+  margin: 20px;
+  padding: 10px;
+}
+
+.button {
+    background-color: #4aa54a;
+    border: none;
+    color: red;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}

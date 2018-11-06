@@ -1,0 +1,15 @@
+development:
+  adapter: mysql2
+  database: five
+  username: root
+  password: <%= ENV['DEV_DB_PW'] %>
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: mysql2
+  database: five_test
+  username: root
+  password: <%= ENV['DEV_DB_PW'] %>
+  pool: 5
+  timeout: 5000

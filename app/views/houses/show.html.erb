@@ -1,0 +1,91 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>MLS:</strong>
+  <%= @house.mls %>
+</p>
+
+<p>
+  <strong>Street Address:</strong>
+  <%= @house.street_1 %>
+</p>
+
+<p>
+  <strong>Address 2:</strong>
+  <%= @house.street_2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @house.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @house.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @house.zipcode %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @house.neighborhood %>
+</p>
+
+<p>
+  <strong>Sales price:</strong>
+  <%= "$" + @house.sales_price.to_s %>
+</p>
+
+<p>
+  <strong>Date listed:</strong>
+  <%= @house.date_listed.strftime("%m/%d/%Y")  %>
+</p>
+
+<p>
+  <strong>Bedrooms:</strong>
+  <%= @house.bedrooms %>
+</p>
+
+<p>
+  <strong>Bathrooms:</strong>
+  <%= @house.bathrooms %>
+</p>
+
+<p>
+  <strong>Garage size:</strong>
+  <%= @house.garage_size %>
+</p>
+
+<p>
+  <strong>Square feet:</strong>
+  <%= @house.square_feet %>
+</p>
+
+<p>
+  <strong>Lot size:</strong>
+  <%= @house.lot_size %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @house.description %>
+</p>
+
+<p>
+  <strong>Photos:</strong>
+  <% @house.photos.each do |photo| %>
+    <% if !photo.title.empty? %>
+        <div>
+          <%= photo.title %>
+          <%= image_tag photo.image %>
+        </div>
+      <% end %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= link_to 'Back', houses_path %>
